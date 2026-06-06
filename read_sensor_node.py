@@ -2,7 +2,7 @@ import serial
 import struct
 import time
 
-PORT = 'COM3'
+PORT = 'COM5'
 BAUDRATE = 9600
 
 def calculate_crc(data):
@@ -80,7 +80,7 @@ def main():
         print(f"Failed to connect: {e}")
         return
 
-    for slave_id in [1]:
+    for slave_id in [4]:
         print(f"\n--- Reading from Slave ID {slave_id} ---")
         for name, (addr, count) in targets.items():
             regs = read_registers(ser, slave_id, 0x03, addr, count)
