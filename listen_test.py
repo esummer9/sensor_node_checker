@@ -3,7 +3,7 @@ import time
 import binascii
 
 def test_listen():
-    ser = serial.Serial('COM3', 9600, timeout=1)
+    ser = serial.Serial('COM5', 9600, timeout=1)
     print("Listening on COM5 for 15 seconds...")
     start = time.time()
     while time.time() - start < 15:
